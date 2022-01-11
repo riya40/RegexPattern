@@ -30,6 +30,14 @@ public class PatternChecking {
         else
             System.out.println("Pattern not matched");
     }
+    public void mobilenumber(){
+        Pattern pattern = Pattern.compile("^[0-9]{2}\\s{1}[0-9]{10}$");
+        Matcher matcher = pattern.matcher("91 9640088322");
+        if (matcher.find())
+            System.out.println("Pattern matched");
+        else
+            System.out.println("Pattern not matched");
+    }
 
 
     public static void main(String[] args) {
@@ -37,5 +45,6 @@ public class PatternChecking {
         patternChecking.firstname();
         patternChecking.lastname();
         patternChecking.email();
+        patternChecking.mobilenumber();
     }
 }
