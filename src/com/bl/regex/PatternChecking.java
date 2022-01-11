@@ -13,11 +13,20 @@ public class PatternChecking {
             System.out.println("Pattern not matched");
     }
 
+    public void lastname(){
+        Pattern pattern = Pattern.compile("^[A-Za-z]{3,6}$");
+        Matcher matcher = pattern.matcher("Priya");
+        if (matcher.find())
+            System.out.println("Pattern matched");
+        else
+            System.out.println("Pattern not matched");
+    }
+
 
     public static void main(String[] args) {
         PatternChecking patternChecking = new PatternChecking();
         patternChecking.firstname();
-       
+        patternChecking.lastname();
 
     }
 }
